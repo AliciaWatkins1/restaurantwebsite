@@ -15,7 +15,9 @@
  <li><a href="index.html">Home Page</a></li>
 <li><a href="history.html">History</a></li>
 <li><a href="menu.html">Menu</a></li>
-<li><a href="aboutus.html">About Us</a></li> 
+<li><a href="aboutus.html">About Us</a></li>
+<li><a href="chief.html">Chief</a></li> 
+<li><a href="thankyou.html">Thank You</a></li>
 </ul> 
 </nav>
 <main><h2><FONT COLOR="brown">Tell Us What You Think</FONT></h2>
@@ -25,18 +27,48 @@
 <input type="text" name="first_name">
 <br><label>Last Name:</label>
 <input type="text" name="last_name">
+<br><input type="radio" name="gender" value="male">Male<br>
+<input type="radio" name="gender" value="female">Female<br>
 <br><label>Email:</label>
 <input type="email" name="email" autocomplete="off">
 <label>Phone:</label>
-<input type="tel" name="phone">
+<input type="tel" name="phone"><br>
+<br><label>Select Your Preferred Form of Contact: </label>
+<select>
+<option value="Email">Email</option> 
+<option value="Phone">Phone</option> 
+<option value="None">None</option>
+</select><br>
+<br><input type="checkbox" name="newsletter" value="subscribe">Check to Subscribe to Our Newsletter
 <br><label>Comments:</label>
 <textarea name="comments" cols="30" rows="10"></textarea>
 <input type="reset" value="Reset Form">
 <input type="submit" value="Submit Form">
 </form>
+
+<h2>Enter Your Four-digit Passcode, Then Click OK:</h2>
+
+<input id="id1" type="number" min="1000" max="9999">
+<button onclick="myFunction()">OK</button>
+<p id="passcode"></p>
+
+<script>
+function myFunction() {
+   var inpObj = document.getElementById("id1");
+   if (inpObj.checkValidity()==false)
+{  document.getElementById("passcode".innerHTML = inpObj.validationMessage;  }
+else
+{  document.getElementById("passcode").innerHTML = "Passcode Vaild";  }
+
+}
+</script>
+
 </main>
 
-<footer></footer>
+<footer>
+<p><a href=”index.html>Home</a> | <a href=”aboutus.html”>About Us</a> | <a
+href=”history.html”>History</a> | <a href=”menu.html”>Menu</a> | <a href=”contactus.html”>ContactUs</a> | <a href=”chef.html”>Meet the Chef</a> | <a href=”thankyou.html”>Thank You</a></p>
+</footer>
 
 </body>
 
